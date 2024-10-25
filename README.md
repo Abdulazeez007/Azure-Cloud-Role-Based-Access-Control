@@ -74,8 +74,28 @@ In the Bash session within the Cloud Shell pane, run the following to list the M
 
 we can confirm that we’ve created a Service Desk group, in addition to our previous groups.
 
-In the Bash session within the Cloud Shell pane, run the following to obtain a reference to the user account of Abdriane Johnson:
+In the Bash session within the Cloud Shell pane, run the following to obtain a reference to the user account of Abdriane Joseph:
 
-    ***USER=$(az ad user list --filter "displayname eq 'Abdriane Johnson'")***
+    ***USER=$(az ad user list --filter "displayname eq 'Abdriane Joseph'")***
+## Next: 1. Obtain a Reference to the User Account
 
-![SOC]()
+First, we will retrieve the user account details for Abdriane Joseph. Run the following command in the Bash session within the Cloud Shell pane:
+
+*** USER=$(az ad user list --filter "displayname eq 'Abdriane Joseph'")***
+
+## 2. Extract the Object ID of the User
+We will extract the objectId property from the user account details we retrieved earlier. Execute the following command:
+
+*** OBJECTID=$(echo $USER | jq '.[].id' | tr -d '"')***
+
+## 3. Add the User to the Service Desk Group
+
+Now that we have the objectId, we can add Abdriane to the **"Service Desk"** group. Run the following command:
+
+***  az ad group member add --group "Service Desk" --member-id $OBJECTID ***
+
+## run the following to list members of the Service Desk group and verify that it includes the user account of Abdriane:
+
+*** az ad group member list --group "Service Desk" ***
+
+![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081780_w.jpg)
