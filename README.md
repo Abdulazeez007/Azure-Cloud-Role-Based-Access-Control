@@ -31,7 +31,7 @@ First, Navigate to Azure portal, Search and select Microsoft Entra ID
 
   ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081749_y.jpg)
 
-  **Now, We have uccessfully used the Azure Portal to create a user and a group, and assigned the user to the group.**
+**Now, We have uccessfully used the Azure Portal to create a user and a group, and assigned the user to the group.**
 
 ## STEP 2: Create a Junior Administrators group containing the user account of Abel Hook as its member. 
 
@@ -40,6 +40,18 @@ First, Navigate to Azure portal, Search and select Microsoft Entra ID
   
   ![SOC]( https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081754_w%20(1).jpg)
 
-  **Now We Have a Junior Administrator Group and Senior Administrator Group**
+**Now We Have a Junior Administrator Group and Senior Administrator Group**
   
  ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081755_w.jpg)
+
+ ## STEP 3: Create a Service Desk group containing the user account of Abdriane Joseph as its member using Azure Cloud (***Bash Shell***)
+
+ Open In the Bash session within the Cloud Shell pane, run the following to identify the name of your Microsoft Entra tenant:
+
+               ***DOMAINNAME=$(az ad signed-in-user show --query 'userPrincipalName' | cut -d '@' -f 2 | sed 's/\"//')***
+ 
+Then, in the Bash session within the Cloud Shell pane, run the following to create a user, **Abdriane Johnson**. 
+
+               ***az ad user create --display-name "Dylan Williams" --password "Pa55w.rd1234" --user-principal-name Dylan@$DOMAINNAME***
+
+![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081766_w.jpg)
