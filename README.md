@@ -55,3 +55,9 @@ Then, in the Bash session within the Cloud Shell pane, run the following to crea
                ***az ad user create --display-name "Dylan Williams" --password "Pa55w.rd1234" --user-principal-name Dylan@$DOMAINNAME***
 
 ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081766_w.jpg)
+
+Now, In the Bash session within the Cloud Shell pane, run the following to list Microsoft Entra ID user accounts (the list should include user accounts of John, Abel, and Abdriane)
+
+               ***az ad user list --output table***
+
+
