@@ -13,7 +13,7 @@ In this article, we’ll explore the implementation of Role-Based Access Control
 - Assign the Virtual Machine Contributor role to the Service Desk group.
 - Assign the Virtual Machine Administrator Login role to the Senior and Junior Admin groups.
 
-## STEP 1: create and configure the Senior Admin Group with Joseph Price as the member
+## STEP 1: create and configure the Senior Administrators Group with Joseph Price as the member
 
 First, Navigate to Azure portal, Search and select Microsoft Entra ID
 
@@ -23,10 +23,23 @@ First, Navigate to Azure portal, Search and select Microsoft Entra ID
 
   ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081746_w.jpg)
 
-  **Next,** create a senior admins group, and add Joseph Price to the group.
+  **Next,** create a senior administrator group, and add Joseph Price to the group.
 
 - Switch to the Groups blade, and create new group
 - Assign the Security Group type, and set Membership type to asigned.
 - Select one owner and add Joseph Price as the owner of this group.
 
--  ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081749_y.jpg)
+  ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081749_y.jpg)
+
+  **Now, We have uccessfully used the Azure Portal to create a user and a group, and assigned the user to the group.**
+
+## STEP 2: Create a Junior Administrators group containing the user account of Abel Hook as its member. 
+
+- Create a new user account for **Abel Hook**
+- Then create the Junior Administrator Group, and add **Abel** to this group, as an owner.
+  
+  ![SOC]( https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081754_w%20(1).jpg)
+
+  **Now We Have a Junior Administrator Group and Senior Administrator Group**
+  
+ ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081755_w.jpg)
