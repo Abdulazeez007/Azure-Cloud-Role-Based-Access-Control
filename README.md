@@ -61,3 +61,21 @@ Now, In the Bash session within the Cloud Shell pane, run the following to list 
                ***az ad user list --output table***
 
 ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/photo_5825543737802081778_w.jpg)
+
+**Next, we’ll create a Service Desk Group, and list Abdriane as it’s member.**
+
+In the same Bash session within the Cloud Shell pane, run the following to create a new security group named Service Desk
+
+       ***az ad group create --display-name "Service Desk" --mail-nickname "ServiceDesk"***
+       
+In the Bash session within the Cloud Shell pane, run the following to list the Microsoft Entra ID groups (the list should include Service Desk, Senior Admins, and Junior Admins groups):
+
+       ***az ad group list -o table***
+
+we can confirm that we’ve created a Service Desk group, in addition to our previous groups.
+
+In the Bash session within the Cloud Shell pane, run the following to obtain a reference to the user account of Abdriane Johnson:
+
+       ***USER=$(az ad user list --filter "displayname eq 'Abdriane Johnson'")***
+
+![SOC]()
