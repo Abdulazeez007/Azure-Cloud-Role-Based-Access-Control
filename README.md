@@ -4,3 +4,5 @@ In this article, we’ll explore the implementation of Role-Based Access Control
 
 ## Role-Based Access Control Architectural Diagram
 
+ ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5827795537615768718_w.jpg)
+
