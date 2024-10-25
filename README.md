@@ -60,4 +60,4 @@ Now, In the Bash session within the Cloud Shell pane, run the following to list 
 
                ***az ad user list --output table***
 
-
+![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/photo_5825543737802081778_w.jpg)
