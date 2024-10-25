@@ -134,4 +134,40 @@ First, we will retrieve the user account details for Abdriane Joseph. Run the fo
 
 - We can confirm that ***Abdriane Joseph*** has been assigned to the Virtual Machine contributor role.
 
+## STEP 5: Assign Virtual Machine Login Administrator roles, to the Junior and Senior Admininistrators.
+- Navigate ***AuroraRG*** Resource Group IAM blade,
+- Add new role assignment.
+- Search for **Virtual Machine Administrator role**; (this allows users inheriting these roles to login to VM’s as admin, with root privileges.)
+- Assign the Senior and Junior Admins Group to this role.
+- Review and create the role.
+
+![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5827795537615768701_w.jpg)
+
+## Now, to check RBAC access of one of the admin members, (Abel Hook).
+- In IAM blade, go to **check access**, and search Abel Hook, then click on email.
+
+![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5827795537615768702_w.jpg)
+
+## As we can see, 
+***Abel Hook*** now inherits the Virtual Machine Administrator Login role due to his membership in the Junior Admin Group, which has been assigned this role.
+
+### Conclusion and Summary
+During this project, I successfully created and managed user accounts, adding them to specific groups through both the Azure Portal and Bash Shell. I also set up a resource group, applying Identity and Access Management (IAM) configurations tailored to that group’s needs. Additionally, I assigned Role-Based Access Control (RBAC) roles to these groups, ensuring that all users within those groups inherited the appropriate permissions.
+
+## Key Takeaways:
+    - User Management: Leveraging both the Azure Portal and Bash Shell for user management enhances flexibility and efficiency in handling user roles and permissions.
+
+    - Resource Grouping: Creating a dedicated resource group allows for more organized and effective IAM configurations, enabling clearer oversight of access and permissions.
+
+    - Role Inheritance: Assigning RBAC roles to groups streamlines permission management, ensuring that any updates or changes are automatically reflected for all users within those groups.
+
+## I hope you found the information valuable.
+
+As you wrap up your work with Azure, remember the importance of resource management. Always take a moment to delete and deprovision any cloud resources that are no longer needed. This not only helps you optimize costs but also ensures that your cloud environment remains secure and efficient. Your diligence in managing resources contributes to a better overall experience in the cloud. Happy cloud computing!
+
+***Remove-AzResourceGroup -Name 'AuroraRG' -Force***
+
+![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5827795537615768703_w.jpg)
+
+### See You Again Next Time, Stay Curious and Do things differently!!!
 
