@@ -6,3 +6,15 @@ In this article, we’ll explore the implementation of Role-Based Access Control
 
  ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5827795537615768718_w.jpg)
 
+## KEY OBJECTIVES
+- Create a Senior Admins group with the user account ‘John Capenter’ as its member using (Azure portal).
+- Create a Junior Admins group with the user account ‘Abel Hook’ as its member using (Azure Portal).
+- Create the Service Desk group with the user ‘Abdriane Joseph’ as its member (Azure CLI).
+- Assign the Virtual Machine Contributor role to the Service Desk group.
+- Assign the Virtual Machine Administrator Login role to the Senior and Junior Admin groups.
+
+## STEP 1: create and configure the Senior Admin Group with Joseph Price as the member
+
+First, Navigate to Azure portal, Search and select Microsoft Entra ID
+
+ ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/photo_5825543737802081741_w.jpg)
