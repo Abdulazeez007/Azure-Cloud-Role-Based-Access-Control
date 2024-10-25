@@ -48,17 +48,17 @@ First, Navigate to Azure portal, Search and select Microsoft Entra ID
 
  Open In the Bash session within the Cloud Shell pane, run the following to identify the name of your Microsoft Entra tenant:
 
-               ***DOMAINNAME=$(az ad signed-in-user show --query 'userPrincipalName' | cut -d '@' -f 2 | sed 's/\"//')***
+      ***DOMAINNAME=$(az ad signed-in-user show --query 'userPrincipalName' | cut -d '@' -f 2 | sed 's/\"//')***
  
 Then, in the Bash session within the Cloud Shell pane, run the following to create a user, **Abdriane Johnson**. 
 
-               ***az ad user create --display-name "Dylan Williams" --password "Pa55w.rd1234" --user-principal-name Dylan@$DOMAINNAME***
+       ***az ad user create --display-name "Dylan Williams" --password "Pa55w.rd1234" --user-principal-name Dylan@$DOMAINNAME***
 
 ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081766_w.jpg)
 
 Now, In the Bash session within the Cloud Shell pane, run the following to list Microsoft Entra ID user accounts (the list should include user accounts of John, Abel, and Abdriane)
 
-               ***az ad user list --output table***
+    ***az ad user list --output table***
 
 ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/photo_5825543737802081778_w.jpg)
 
@@ -66,16 +66,16 @@ Now, In the Bash session within the Cloud Shell pane, run the following to list 
 
 In the same Bash session within the Cloud Shell pane, run the following to create a new security group named Service Desk
 
-       ***az ad group create --display-name "Service Desk" --mail-nickname "ServiceDesk"***
+    ***az ad group create --display-name "Service Desk" --mail-nickname "ServiceDesk"***
        
 In the Bash session within the Cloud Shell pane, run the following to list the Microsoft Entra ID groups (the list should include Service Desk, Senior Admins, and Junior Admins groups):
 
-       ***az ad group list -o table***
+    ***az ad group list -o table***
 
 we can confirm that we’ve created a Service Desk group, in addition to our previous groups.
 
 In the Bash session within the Cloud Shell pane, run the following to obtain a reference to the user account of Abdriane Johnson:
 
-       ***USER=$(az ad user list --filter "displayname eq 'Abdriane Johnson'")***
+    ***USER=$(az ad user list --filter "displayname eq 'Abdriane Johnson'")***
 
 ![SOC]()
