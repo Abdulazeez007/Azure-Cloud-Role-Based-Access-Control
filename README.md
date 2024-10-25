@@ -84,18 +84,54 @@ First, we will retrieve the user account details for Abdriane Joseph. Run the fo
 *** USER=$(az ad user list --filter "displayname eq 'Abdriane Joseph'")***
 
 ## 2. Extract the Object ID of the User
-We will extract the objectId property from the user account details we retrieved earlier. Execute the following command:
+- We will extract the objectId property from the user account details we retrieved earlier. Execute the following command:
 
 *** OBJECTID=$(echo $USER | jq '.[].id' | tr -d '"')***
 
 ## 3. Add the User to the Service Desk Group
 
-Now that we have the objectId, we can add Abdriane to the **"Service Desk"** group. Run the following command:
+- Now that we have the objectId, we can add Abdriane to the **"Service Desk"** group. Run the following command:
 
-***  az ad group member add --group "Service Desk" --member-id $OBJECTID ***
+
+***  az ad group member add --group "Service Desk" --member-id $OBJECTID***
 
 ## run the following to list members of the Service Desk group and verify that it includes the user account of Abdriane:
 
-*** az ad group member list --group "Service Desk" ***
+
+*** az ad group member list --group "Service Desk"***
+
 
 ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081780_w.jpg)
+
+
+## STEP 4: Assign the Virtual Machine Contributor role to the Service Desk group.
+
+- First, I quickly created a resource group ***AuroraRG***, to ***centralus*** region, using powershell
+
+![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5827795537615768689_y.jpg)
+
+## Next, Assign the Service Desk Virtual Machine Contributor permissions.
+- Open Azure Portal and navigate to the Resource Group we just created, and click the IAM Blade.
+- Add new role assignment
+- Search for the Virtual Machine Contributor role
+
+
+![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5827795537615768693_w.jpg)
+
+
+- Select, and configure new role assinment that automatically assigns the role to members in the Service Desk group.
+
+![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5827795537615768696_w.jpg)
+
+
+## Next: Check the RBAC permissions
+
+- On the ***Aurora-RG***
+- Go to Access control (IAM) blade,
+- On the Check access tab, in the Search by name or email address text box, type ***Abdriane Joseph***.
+
+![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5827795537615768697_w%20(1).jpg)
+
+- We can confirm that ***Abdriane Joseph*** has been assigned to the Virtual Machine contributor role.
+
+
