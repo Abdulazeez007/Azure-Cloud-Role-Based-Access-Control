@@ -23,4 +23,10 @@ First, Navigate to Azure portal, Search and select Microsoft Entra ID
 
   ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081746_w.jpg)
 
-  
+  **Next,** create a senior admins group, and add Joseph Price to the group.
+
+- Switch to the Groups blade, and create new group
+- Assign the Security Group type, and set Membership type to asigned.
+- Select one owner and add Joseph Price as the owner of this group.
+
+-  ![SOC](https://github.com/Virus192/Azure-Cloud-Role-Based-Access-Control/blob/main/Images/RBAC/photo_5825543737802081749_y.jpg)
